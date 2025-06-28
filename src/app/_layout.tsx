@@ -8,6 +8,7 @@ import 'react-native-reanimated';
 
 // import { useColorScheme } from '@/components/useColorScheme';
 import { useColorScheme } from '../components/useColorScheme.web';
+import CartProvider from './provider/CartProvider';
 export {
   // Catch any errors thrown by the Layout component.
   ErrorBoundary,
@@ -50,10 +51,12 @@ function RootLayoutNav() {
 
   return (
     <ThemeProvider value={colorScheme === 'dark' ? DarkTheme : DefaultTheme}>
-      <Stack>
+     <CartProvider>
+       <Stack>
         <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
-        <Stack.Screen name="modal" options={{ presentation: 'modal' }} />
+        <Stack.Screen name="cart" options={{ presentation: 'modal' }} />
       </Stack>
+     </CartProvider>
     </ThemeProvider>
   );
 }
