@@ -8,7 +8,7 @@ import 'react-native-reanimated';
 
 // import { useColorScheme } from '@/components/useColorScheme';
 import { useColorScheme } from '../components/useColorScheme.web';
-import CartProvider from './provider/CartProvider';
+import CartProvider from '../providers/CartProvider';
 export {
   // Catch any errors thrown by the Layout component.
   ErrorBoundary,
